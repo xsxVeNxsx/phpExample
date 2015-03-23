@@ -3,18 +3,18 @@
 class base_controller
 {
     protected $model;
-	protected $template;
-	protected $actions;
-	protected $title;
+    protected $template;
+    protected $actions;
+    protected $title;
     public function __construct($model)
     {
         $this->model = $model;
-		$this->template = "base";
-		$this->title = "Main page";
+        $this->template = "base";
+        $this->title = "Main page";
     }
 
     protected function index()
-	{
+    {
         $blocks = array("auth_form");
         $this->render($blocks);
     }
@@ -23,7 +23,7 @@ class base_controller
     {
         $action = $_REQUEST["action"];
         if (!isset($action) || !in_array($action, $this->actions))
-			$action = "index";
+            $action = "index";
         return $this->$action();
     }
 
