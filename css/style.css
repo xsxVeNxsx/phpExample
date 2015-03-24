@@ -2,3 +2,28 @@ body{
     margin: 0;
     padding: 0;
 }
+
+#auth_block
+{
+    width: 250px;
+    height: 150px;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+}
+
+#error
+{
+    font-size: 15pt;
+    margin-left: 5px;
+}
+
+#auth_form input
+{
+    margin: 5px 0 5px 5px;
+}
+
+#auth_form input[type="text"]
+{
+    width: 200px;
+}
