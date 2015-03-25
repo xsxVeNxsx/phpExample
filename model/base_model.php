@@ -13,12 +13,13 @@ class Base_Model
         return $db;
     }
 
-    public function __construct($table_name, $fields)
+    public function __construct($table_name, $fields, $db = null)
     {
         $this->table_name = $table_name;
         $this->fields = $fields;
         //$db = db_connect('localhost', 'u272679865_admin', 'u272679865_photo', '123123123');
-        $this->db = $this->db_connect('localhost', 'photos', 'admin', '123123123');
+        if ($db == null)
+            $this->db = $this->db_connect('localhost', 'photos', 'admin', '123123123');
     }
 
     public function get($params)
@@ -38,6 +39,11 @@ class Base_Model
             array_push($arr, $params[$value]);
         $query = "INSERT INTO $this->table_name VALUES('' ".str_repeat(",?", count($this->fields)).")";
         $this->db->prepare($query)->execute($arr);
+    }
+
+    public function db()
+    {
+        return $db;
     }
 }
 

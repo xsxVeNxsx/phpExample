@@ -3,9 +3,9 @@ require_once 'base_model.php';
 
 class Users_Model extends Base_Model
 {
-    public function __construct()
+    public function __construct($db = null)
     {
-        parent::__construct('users', ['email', 'password']);
+        parent::__construct('users', ['email', 'password'], $db);
     }
 
     public function add($params)
