@@ -3,8 +3,9 @@ session_start();
 error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED);
 require_once "controller/auth_controller.php";
 
-$controllers = ["index" => auth_controller,
-                "auth" => auth_controller];
+$controllers = ["index" => Profile_Controller,
+                "auth" => Auth_Controller,
+                "profile" => Profile_Controller];
 
 $controller = $_GET['controller'];
 if (!isset($controller))

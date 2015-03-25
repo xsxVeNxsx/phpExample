@@ -1,7 +1,7 @@
 <?php
 require_once 'base_model.php';
 
-class users_model extends base_model
+class Users_Model extends Base_Model
 {
     public function __construct()
     {

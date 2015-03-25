@@ -1,7 +1,7 @@
 <?php
 include_once "session_handler.php";
 
-class base_controller
+class Base_Controller
 {
     protected $model;
     protected $template = "base";

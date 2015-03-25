@@ -2,11 +2,11 @@
 require_once "base_controller.php";
 require_once "model/users_model.php";
 
-class auth_controller extends base_controller
+class Auth_Controller extends Base_Controller
 {
     public function __construct()
     {
-        $this->model = new users_model();
+        $this->model = new Users_Model();
         $this->title = "Authentication";
         $this->scripts = array_merge($this->scripts, array("auth"));
         $this->actions = array_merge($this->actions, array("signin", "signup"));

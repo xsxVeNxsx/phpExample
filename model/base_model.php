@@ -1,6 +1,6 @@
 <?php
 
-class base_model
+class Base_Model
 {
     protected  $table_name, $fields, $db;
 
