@@ -1,6 +1,6 @@
 function loadPhotos()
 {
-    var url = "http://localhost/farpost?controller=profile&action=get_photos";
+    var url = "?controller=profile&action=get_photos";
     $.ajax({
         method: 'GET',
         url: url,
