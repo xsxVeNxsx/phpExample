@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    padding: 0;
+    padding: 5px;
 }
 
 #auth_block
@@ -18,7 +18,7 @@ body{
     margin-left: 5px;
 }
 
-#auth_form input
+#auth_form input, #photos_form input
 {
     margin: 5px 0 5px 5px;
 }
@@ -26,4 +26,39 @@ body{
 #auth_form input[type="text"]
 {
     width: 200px;
+}
+
+#user_info_block
+{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+#exit_button
+{
+    float: right;
+}
+
+#hidden_frame
+{
+    display: none;
+}
+
+#photo_album_block
+{
+    width: 100%;
+}
+
+#photo_album_block img
+{
+    width: 100px;
+    height: 100px;
+}
+
+.photo
+{
+    margin: 10px 5px 0 0;
+    width: 100px;
+    height: 100px;
+    float: left;
 }
