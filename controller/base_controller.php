@@ -1,4 +1,5 @@
 <?php
+include_once "session_handler.php";
 
 class base_controller
 {
