@@ -24,12 +24,12 @@ class Base_Model
 
     public function get($params)
     {
-        $keys = array_intersect(array_keys($params), $this->fields);
+        $keys = array_intersect(array_keys($params), array_merge($this->fields, ["id"]));
         $keys = array_map(function ($i) {return "$i = ?";}, $keys);
         $where = "WHERE ".implode(" AND ", $keys);
         $q = $this->db->prepare("SELECT * FROM $this->table_name $where");
         $q->execute(array_values($params));
-        return $q->fetchAll();
+        return $q->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function add($params)
