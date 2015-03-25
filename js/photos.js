@@ -11,8 +11,8 @@ function loadPhotos()
             for (var i = 0; i < data.length; ++i)
                 $("#photo_album_block").append(
                     $("<div/>", {"class": "photo"}).append(
-                        $("<a/>", {"href": data[i], "target": "_blank"}).append(
-                            $("<img/>", {"src": data[i]})
+                        $("<a/>", {"href": "img/" + data[i], "target": "_blank"}).append(
+                            $("<img/>", {"src": "img/thumb/" + data[i]})
                         )
                     )
                 );
